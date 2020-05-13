@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #e0e5ec;
+    color: rgb(0, 31, 63);
+    /*font-family: 'Roboto', sans-serif;*/
+}
+
+header {
+    display: flex;
+    width: 80%;
+    height: max(70px, min(10vh,10vw));
+    align-items: center;
+    border-radius: 15px;
+    margin: 2vh auto auto;
+    /*abb1c6*/
+    box-shadow: 8px 8px 15px #bec3c9, -8px -8px 15px white;
+}
+
+.logo-container {
+    flex: 1;
+}
+
+.logo-text {
+    margin: 5px 5px 5px 5%;
+    font-weight: 500;
+}
+
+nav {
+    flex: 1;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+.nav-item {
+    box-shadow: 3px 3px 6px #bec3c9, -3px -3px 6px white;
+    background: #e0e5ec;
+    border-radius: 100px;
+    border: none;
+    cursor: pointer;
+    padding: 12px;
+    margin: 10px;
+    min-width: max(10vw, 110px);
+    text-align: center;
+    text-decoration: none;
+    color: #5f5f79;
+}
+
+.nav-item:hover {
+    background: linear-gradient(145deg, #f0f5fd, #caced4);
+    border-radius: 50px;
+    box-shadow: 3px 3px 6px #bec3c9, -3px -3px 6px white;
+}
+
+.nav-item:focus{
+    outline: none;
+}
+
+.nav-item:active{
+    border-radius: 50px;
+    background: #e0e5ec;
+    box-shadow: inset 3px 3px 6px #bec3c9,
+    inset -3px -3px 6px #ffffff;
+}
+
+a {
+    text-decoration: none;
+    color: #5f5f79;
+}
+.background{
+    height: 20vh;
+    width: 80vw;
+    margin: 25px auto 0;
+    border-radius: 15px 15px 0 0 ;
+    background-image: url("images/kevin-borrill-7_N1zLrY7ns-unsplash.jpg");
+    background-size: cover;
+    box-shadow: 3px 0 6px #bec3c9, -3px -3px 6px white;
+}
+
+.profile-pic{
+    height: max(max(10vh,10vw),120px);
+    width: max(max(10vh,10vw),120px);
+    margin: max(-10vh,-10vw) auto 0;
+    background-image: url("images/ProfilePic.jpg");
+    background-size: cover;
+    border-radius: 15px;
+    border: 5px solid white;
+    box-shadow: 1px 3px 6px #bec3c9;
+}
+.main-text{
+    z-index: -1;
+    position: relative;
+    background: white;
+    width: 80vw;
+    margin: max(-12vh,-12vw) auto 0;
+    padding: min(17vh,17vw) 5vw 5vh;
+    border-radius: 0 0 15px 15px;
+    box-shadow: 3px 3px 6px #bec3c9, -3px 0 6px white;
+
+}
