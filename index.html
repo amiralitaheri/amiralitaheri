@@ -25,16 +25,43 @@
             </li>
         </ul>
     </nav>
+    <label class="dark-mode-switch">
+        <input type="checkbox" onclick="changeCSS('',1)">
+        <span class="slider round"></span>
+    </label>
 </header>
 <main>
     <div class="background"></div>
     <div class="profile-pic"></div>
     <div class="main-text">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquid aspernatur aut eveniet laborum nam nisi perspiciatis porro recusandae sequi! Culpa dolorem eligendi eos eum neque, quas soluta vero voluptates!<br/>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem culpa cupiditate delectus distinctio dolorem, error eum eveniet facere fuga magnam omnis optio pariatur perferendis, perspiciatis quaerat reiciendis, sed sint tenetur!<br/>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias ex incidunt maxime, quasi reiciendis tempora! Adipisci consequuntur corporis cum facilis officia porro sed vitae. Facere vel, voluptas! Culpa, provident, sunt.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquid aspernatur aut eveniet laborum
+           nam nisi perspiciatis porro recusandae sequi! Culpa dolorem eligendi eos eum neque, quas soluta vero
+           voluptates!<br/>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem culpa cupiditate delectus
+           distinctio dolorem, error eum eveniet facere fuga magnam omnis optio pariatur perferendis, perspiciatis
+           quaerat reiciendis, sed sint tenetur!<br/>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias ex
+           incidunt maxime, quasi reiciendis tempora! Adipisci consequuntur corporis cum facilis officia porro sed
+           vitae. Facere vel, voluptas! Culpa, provident, sunt.</p>
     </div>
 </main>
 <footer>
 
 </footer>
 </body>
+<script lang="javascript">
+    let darkMode = -1;
+    function changeCSS(cssLinkIndex) {
+        let cssFile = 'style.css';
+        darkMode*= -1;
+        if (darkMode === 1) {
+            cssFile = 'dark-style.css'
+        }
+        let oldLink = document.getElementsByTagName("link").item(cssLinkIndex);
+        let newLink = document.createElement("link");
+        newLink.setAttribute("rel", "stylesheet");
+        newLink.setAttribute("type", "text/css");
+        newLink.setAttribute("href", cssFile);
+
+        document.getElementsByTagName("head").item(0).replaceChild(newLink, oldLink);
+    }
+</script>
 </html>
